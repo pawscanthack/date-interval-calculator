@@ -10,7 +10,7 @@ export default function ReactCalendar({ value, onChange }) {
     <>
       <div className="date-picker">
         <header>
-          <h1>Pick a date, Zoki</h1>
+          <h1>Pick a date</h1>
         </header>
         <div className="date-picker__container">
           <main className="date-picker__container__content">
