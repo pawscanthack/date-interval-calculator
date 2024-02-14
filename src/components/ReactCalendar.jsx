@@ -4,8 +4,6 @@ import "react-calendar/dist/Calendar.css";
 import "../css/reactCalendar.css";
 
 export default function ReactCalendar({ value, onChange }) {
-  // Convert the Date object to a string in a readable format
-
   return (
     <>
       <div className="date-picker">

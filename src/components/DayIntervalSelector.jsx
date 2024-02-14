@@ -6,12 +6,20 @@ function DayIntervalSelector({ onChange }) {
 
   const handleIntervalChange = (event) => {
     const value = event.target.value;
-    setSelectedInterval(value);
-    onChange(value);
+    if (value === "custom") {
+      setSelectedInterval(value);
+    } else {
+      setSelectedInterval(parseInt(value));
+      onChange(value);
+    }
   };
 
   const handleCustomInputChange = (event) => {
     const value = event.target.value;
+    if (parseInt(value) > 365) {
+      alert("Custom interval cannot exceed 365 days");
+      return;
+    }
     setCustomValue(value);
     onChange(value);
   };
