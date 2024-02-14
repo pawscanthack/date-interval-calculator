@@ -38,17 +38,19 @@ function App() {
         <ReactCalendar value={selectedDate} onChange={handleDateChange} />
       </div>
       <div>
-        <h1>Selected Date</h1>
+        <h1>Start Date</h1>
+        <hr />
         <p>{selectedDate.toLocaleDateString()}</p>
       </div>
       <div>
         <h1>Day Interval Selector</h1>
+        <hr />
         <DayIntervalSelector onChange={handleIntervalChange} />
         <p>Selected Interval: {selectedInterval}</p>
       </div>
       <div>
-        <h1>Result Date:</h1>
-
+        <h1>Result Date</h1>
+        <hr />
         <a
           onClick={copyToClipboard}
           ref={resultRef}

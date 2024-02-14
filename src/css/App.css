@@ -4,3 +4,8 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  background: linear-gradient(to bottom right, #85aef0, #c0d9ff);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* Text color */
+}
