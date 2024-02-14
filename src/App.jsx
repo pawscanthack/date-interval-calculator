@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./App.css";
+import "./css/App.css";
+import Sample from "./components/ReactCalendar.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,6 +9,7 @@ function App() {
     <>
       <div className="App">
         <h1>Calendar</h1>
+        <Sample />
       </div>
     </>
   );
