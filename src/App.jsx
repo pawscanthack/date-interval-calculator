@@ -1,15 +1,22 @@
 import { useState } from "react";
 import "./css/App.css";
-import Sample from "./components/ReactCalendar.jsx";
+import ReactCalendar from "./components/ReactCalendar.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  // const formattedDate = value.toLocaleDateString();
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
 
   return (
     <>
       <div className="App">
         <h1>Calendar</h1>
-        <Sample />
+        <ReactCalendar value={selectedDate} onChange={handleDateChange} />
+      </div>
+      <div>
+        <h1>{selectedDate.toLocaleDateString()}</h1>
       </div>
     </>
   );

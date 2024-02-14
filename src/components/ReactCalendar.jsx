@@ -3,11 +3,8 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "../css/reactCalendar.css";
 
-export default function Sample() {
-  const [value, onChange] = useState(new Date());
-
+export default function ReactCalendar({ value, onChange }) {
   // Convert the Date object to a string in a readable format
-  const formattedDate = value.toLocaleDateString();
 
   return (
     <>
@@ -20,10 +17,6 @@ export default function Sample() {
             <Calendar onChange={onChange} showWeekNumbers value={value} />
           </main>
         </div>
-      </div>
-      <div>
-        {/* Display the formatted date */}
-        <h1>{formattedDate}</h1>
       </div>
     </>
   );
